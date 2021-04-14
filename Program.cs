@@ -5,6 +5,58 @@ namespace AllCardsOnDeckCS
 {
     class Program
     {
+        static int findScore(string ihatethis)
+        {
+            int score = 0;
+
+            switch (ihatethis)
+            {
+                case "Ac":
+                    score = 14;
+                    break;
+                case "2 ":
+                    score = 2;
+                    break;
+                case "3 ":
+                    score = 3;
+                    break;
+                case "4 ":
+                    score = 4;
+                    break;
+                case "5 ":
+                    score = 5;
+                    break;
+                case "6 ":
+                    score = 6;
+                    break;
+                case "7 ":
+                    score = 7;
+                    break;
+                case "8 ":
+                    score = 8;
+                    break;
+                case "9 ":
+                    score = 9;
+                    break;
+                case "10":
+                    score = 10;
+                    break;
+                case "Ja":
+                    score = 11;
+                    break;
+                case "Qu":
+                    score = 12;
+                    break;
+                case "Ki":
+                    score = 13;
+                    break;
+                default:
+                    Console.Write("wtf");
+                    break;
+
+            }
+            return score;
+        }
         static void Main(string[] args)
         {
 
@@ -94,6 +146,7 @@ namespace AllCardsOnDeckCS
             // }
 
 
+            Console.WriteLine("Dealing two hands");
             string firstCard = deck[0];
 
             string secondCard = deck[1];
@@ -125,6 +178,45 @@ namespace AllCardsOnDeckCS
                 Console.WriteLine(opponentHand[opponentCard]);
             }
             Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("War!");
+
+            Console.WriteLine("Player's card: " + firstCard);
+            Console.WriteLine("Opponent's card: " + secondCard);
+
+
+
+            var firstLetterA = firstCard[0];
+            var secondLetterA = firstCard[1];
+            string firstTwoLetters = $"{firstLetterA}{secondLetterA}";
+
+            var playerScore = findScore(firstTwoLetters);
+
+            var firstLetterB = secondCard[0];
+            var secondLetterB = secondCard[1];
+            string firstTwoLettersB = $"{firstLetterB}{secondLetterB}";
+
+            var opponentScore = findScore(firstTwoLettersB);
+
+
+            //testing
+            // Console.WriteLine(playerScore);
+            // Console.WriteLine(opponentScore);
+
+            if (playerScore > opponentScore)
+            {
+                Console.WriteLine("Player wins!");
+
+            }
+            else if (playerScore < opponentScore)
+            {
+                Console.WriteLine("Player Loses!");
+            }
+            else
+            {
+                Console.WriteLine("It's a tie!");
+            }
 
 
 
