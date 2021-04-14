@@ -107,6 +107,7 @@ namespace AllCardsOnDeckCS
 
             var opponentHand = new List<string>() { secondCard, fourthCard };
 
+            Console.WriteLine();
             Console.WriteLine("Player's Hand");
 
             for (var playerCard = 0; playerCard < 2; playerCard++)
@@ -114,12 +115,17 @@ namespace AllCardsOnDeckCS
                 Console.WriteLine(playerHand[playerCard]);
             }
 
+            Console.WriteLine();
+
+
             Console.WriteLine("Other Player's Hand");
 
             for (var opponentCard = 0; opponentCard < 2; opponentCard++)
             {
                 Console.WriteLine(opponentHand[opponentCard]);
             }
+            Console.WriteLine();
+
 
 
 
