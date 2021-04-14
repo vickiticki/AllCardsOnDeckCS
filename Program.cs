@@ -93,18 +93,33 @@ namespace AllCardsOnDeckCS
 
             // }
 
-            Console.WriteLine(deck[0]);
-            Console.WriteLine(deck[1]);
 
             string firstCard = deck[0];
 
             string secondCard = deck[1];
 
-            Console.WriteLine(firstCard);
-            Console.WriteLine(secondCard);
+            string thirdCard = deck[2];
+
+            string fourthCard = deck[3];
 
 
+            var playerHand = new List<string>() { firstCard, thirdCard };
 
+            var opponentHand = new List<string>() { secondCard, fourthCard };
+
+            Console.WriteLine("Player's Hand");
+
+            for (var playerCard = 0; playerCard < 2; playerCard++)
+            {
+                Console.WriteLine(playerHand[playerCard]);
+            }
+
+            Console.WriteLine("Other Player's Hand");
+
+            for (var opponentCard = 0; opponentCard < 2; opponentCard++)
+            {
+                Console.WriteLine(opponentHand[opponentCard]);
+            }
 
 
 
